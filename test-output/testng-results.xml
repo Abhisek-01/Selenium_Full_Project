@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2"
-	failed="0" skipped="0">
-	<reporter-output>
-	</reporter-output>
-	<suite started-at="2025-04-03T01:49:41 IST" name="Default suite"
-		finished-at="2025-04-03T01:49:49 IST" duration-ms="7928">
-		<groups>
-		</groups>
-		<test started-at="2025-04-03T01:49:41 IST" name="Default test"
-			finished-at="2025-04-03T01:49:49 IST" duration-ms="7928">
-			<class name="Generics.Tests">
-				<test-method is-config="true"
-					signature="base()[pri:0, instance:Generics.Tests@8519cb4]"
-					started-at="2025-04-03T01:49:41 IST" name="base"
-					finished-at="2025-04-03T01:49:47 IST" duration-ms="6062"
-					status="PASS">
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- base -->
-				<test-method
-					signature="test()[pri:1, instance:Generics.Tests@8519cb4]"
-					started-at="2025-04-03T01:49:48 IST" name="test"
-					finished-at="2025-04-03T01:49:49 IST" duration-ms="1455"
-					status="PASS">
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- test -->
-				<test-method
-					signature="back()[pri:2, instance:Generics.Tests@8519cb4]"
-					started-at="2025-04-03T01:49:49 IST" name="back"
-					finished-at="2025-04-03T01:49:49 IST" duration-ms="320"
-					status="PASS">
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- back -->
-				<test-method is-config="true"
-					signature="teardown()[pri:0, instance:Generics.Tests@8519cb4]"
-					started-at="2025-04-03T01:49:49 IST" name="teardown"
-					finished-at="2025-04-03T01:49:49 IST" duration-ms="1" status="PASS">
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- teardown -->
-			</class> <!-- Generics.Tests -->
-		</test> <!-- Default test -->
-	</suite> <!-- Default suite -->
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-05T01:09:14 IST" name="Default suite" finished-at="2025-04-05T01:09:24 IST" duration-ms="10022">
+    <groups>
+    </groups>
+    <test started-at="2025-04-05T01:09:14 IST" name="Default test" finished-at="2025-04-05T01:09:24 IST" duration-ms="10022">
+      <class name="Generics.Tests">
+        <test-method is-config="true" signature="base()[pri:0, instance:Generics.Tests@35dab4eb]" started-at="2025-04-05T01:09:14 IST" name="base" finished-at="2025-04-05T01:09:20 IST" duration-ms="5671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- base -->
+        <test-method signature="test()[pri:1, instance:Generics.Tests@35dab4eb]" started-at="2025-04-05T01:09:20 IST" name="test" finished-at="2025-04-05T01:09:21 IST" duration-ms="866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method signature="tab()[pri:2, instance:Generics.Tests@35dab4eb]" started-at="2025-04-05T01:09:21 IST" name="tab" finished-at="2025-04-05T01:09:23 IST" duration-ms="2285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tab -->
+        <test-method signature="iframe()[pri:3, instance:Generics.Tests@35dab4eb]" started-at="2025-04-05T01:09:23 IST" name="iframe" finished-at="2025-04-05T01:09:24 IST" duration-ms="1145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iframe -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Generics.Tests@35dab4eb]" started-at="2025-04-05T01:09:24 IST" name="teardown" finished-at="2025-04-05T01:09:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Generics.Tests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
