@@ -5,9 +5,11 @@
     <classes>
       <class name="Generics.Tests">
         <methods>
-          <include name="teardown"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tab"/>
+          <include name="test"/>
           <include name="iframe"/>
-          <include name="base"/>
         </methods>
       </class> <!-- Generics.Tests -->
     </classes>
