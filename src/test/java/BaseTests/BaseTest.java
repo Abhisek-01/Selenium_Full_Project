@@ -23,7 +23,7 @@ public class BaseTest {
 	protected WebDriver driver;
 	protected Properties prop;
 
-	private static final String HUB_URL = "http://localhost:4444/wd/hub";
+	private static final String HUB_URL = "http://selenium-hub:4444/wd/hub";
 	
 
 	@BeforeClass
@@ -33,7 +33,7 @@ public class BaseTest {
 		// 👉 CHANGE ONLY THIS LINE to switch browser
 //		startChrome(); 
 		// startFirefox();
-//		 startGrid("chrome");
+		 startGrid("chrome");
 		 startGrid("firefox");
 
 		openApplication();
@@ -116,7 +116,7 @@ public class BaseTest {
 		System.out.println("✅ Clicked Get Started");
 	}
 
-	/* ================= TEARDOWN ================= */
+	/* ================= TEARDOWN ================= */		
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
