@@ -1,18 +1,20 @@
-version: "3.8"
+
 
 services:
 
   selenium-hub:
-    image: selenium/hub:4.19.1
+    image: selenium/hub:4.30.0
     container_name: selenium-hub
     ports:
+      - "4442:4442"
+      - "4443:4443"
       - "4444:4444"
-    environment:
-      - SE_SESSION_REQUEST_TIMEOUT=300
-      - SE_SESSION_RETRY_INTERVAL=5
+    networks:
+      - selenium-grid
 
   chrome:
-    image: selenium/node-chrome:4.19.1
+    image: selenium/node-chrome:4.30.0
+    container_name: chrome-node
     shm_size: 2gb
     depends_on:
       - selenium-hub
@@ -20,9 +22,14 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7900:7900"   # ✅ Chrome VNC
+    networks:
+      - selenium-grid
 
   firefox:
-    image: selenium/node-firefox:4.19.1
+    image: selenium/node-firefox:4.30.0
+    container_name: firefox-node
     shm_size: 2gb
     depends_on:
       - selenium-hub
@@ -30,17 +37,27 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7901:7900"   # ✅ Firefox VNC
+    networks:
+      - selenium-grid
 
   jenkins:
     image: jenkins/jenkins:lts
     container_name: jenkins
+    user: root
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
-    depends_on:
-      - selenium-hub
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - selenium-grid
+
+networks:
+  selenium-grid:
+    driver: bridge
 
 volumes:
   jenkins_home:

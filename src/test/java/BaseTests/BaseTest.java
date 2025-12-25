@@ -33,7 +33,7 @@ public class BaseTest {
 		// 👉 CHANGE ONLY THIS LINE to switch browser
 //		startChrome(); 
 		// startFirefox();
-		 startGrid("chrome");
+//		 startGrid("chrome");
 		 startGrid("firefox");
 
 		openApplication();
