@@ -17,3 +17,7 @@ test-output/
 
 # OS files
 .DS_Store
+
+# Jenkins
+jenkins_config.xml
+
